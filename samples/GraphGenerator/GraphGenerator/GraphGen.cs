@@ -262,6 +262,13 @@ namespace GraphGenerator
             Global.LocalStorage.SaveStorage();
             sss.Stop();
             Console.WriteLine("saveStorage cost time:{0}", sss.ElapsedMilliseconds);
+            //foreach (var node in Global.LocalStorage.GraphNode_Selector())
+            //{
+            //    Console.WriteLine(node);
+            //}
+            //var results = from node in Global.LocalStorage.GraphNode_Accessor_Selector()
+            //              select node;
+            //Console.WriteLine(results.Distinct());
         }
         public static void CellCleaningThreadProc(object par)
         {
@@ -290,5 +297,15 @@ namespace GraphGenerator
                 }
             }
         }
+
+        public void Print_Nodes()
+        {
+            Console.WriteLine("NODES: ");
+            foreach (var node in Global.LocalStorage.GraphNode_Selector())
+            {
+                Console.WriteLine(node);
+            }
+        }
+
     }
 }
