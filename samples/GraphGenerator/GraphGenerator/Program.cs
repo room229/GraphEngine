@@ -14,8 +14,22 @@ namespace GraphGenerator
     {
         static void Main(string[] args)
         {
-            GraphGen gg = new GraphGen(1 << 20, 16, 100);
-            gg.CreatGraph();
+            //GraphGen gg = new GraphGen(1 << 20, 16, 100);
+            //GraphGen gg = new GraphGen(5, 5, 5);
+            //gg.CreatGraph();
+            //gg.Print_Nodes();
+            Console.WriteLine("Choose engine command: ");
+            Console.WriteLine("1. Create graph");
+            Console.WriteLine("2. View created graph nodes\n");
+            ConsoleKeyInfo keyb_Inp = Console.ReadKey();
+            if (keyb_Inp.KeyChar == '1')
+                Console.WriteLine("\nNode count: ");
+                Console.WriteLine("Avg degree: ");
+                Console.WriteLine("Label count: ");
+
+
+
+
         }
     }
 }
