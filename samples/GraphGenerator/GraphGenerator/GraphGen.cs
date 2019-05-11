@@ -298,9 +298,10 @@ namespace GraphGenerator
             }
         }
 
-        public void Print_Nodes()
+        public static void Print_Nodes()
         {
-            Console.WriteLine("NODES: ");
+            Console.WriteLine("\nNODES: ");
+            Global.LocalStorage.LoadStorage();
             foreach (var node in Global.LocalStorage.GraphNode_Selector())
             {
                 Console.WriteLine(node);
